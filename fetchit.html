@@ -1,0 +1,20 @@
+<html>
+ <head>
+ </head>
+ <body>
+   <script type="text/javascript">
+
+    var options = {
+      host: 'www.uab.edu',
+      port: 80,
+      path: '/news/component/k2/itemlist/search?searchword=IT&format=feed'
+    };
+
+    http.get(options, function(res) {
+      <!--
+         document.write("Got response: " + res.statusCode)
+      //-->
+      console.log("Got response: " + res.statusCode);
+    }).on('error', function(e) {
+      console.log("Got error: " + e.message);
+    });
